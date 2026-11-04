@@ -116,6 +116,12 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     imageUrl: './assets/aistudio/06_BlackLab_-_Atmosfera_bdcca2c1.jpeg',
     title: 'Atmosfera',
     caption: '06 / Black Lab · Atmosfera'
+  },
+  {
+    id: 7,
+    imageUrl: './assets/aistudio/07_BlackLab_-_Listino_640db05a.jpeg',
+    title: 'Listino Prezzi',
+    caption: '07 / Black Lab · Listino'
   }
 ];
 
