@@ -17,6 +17,7 @@ export interface GalleryItem {
   imageUrl: string;
   title: string;
   caption: string;
+  alt?: string;
   span?: string;
 }
 

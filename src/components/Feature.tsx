@@ -8,7 +8,9 @@ export const Feature: React.FC = () => {
         <img
           loading="lazy"
           src={SALON_INFO.featureImageUrl}
-          alt="Dettaglio dei prodotti utilizzati da Black Lab Hair Spa"
+          alt="Trattamento colore e riflessi ramati intensi su capelli lunghi e lisci da Black Lab Hair Spa a Torino"
+          width="1440"
+          height="1800"
         />
         <span className="image-index mono">02 / Black Lab</span>
       </div>

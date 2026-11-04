@@ -54,7 +54,10 @@ export const Header: React.FC = () => {
             <img
               className="brand-mark"
               src={SALON_INFO.logoUrl}
-              alt="Logo Black Lab Hair Spa"
+              alt="Logo di Black Lab Hair Spa - Salone parrucchiere a Torino"
+              width="43"
+              height="43"
+              loading="eager"
             />
             <span className="brand-name">
               {SALON_INFO.name}

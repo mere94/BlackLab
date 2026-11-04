@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Intro } from './components/Intro';
@@ -20,6 +20,10 @@ export const App: React.FC = () => {
 
   // Initialize scroll reveal animations
   useScrollReveal();
+
+  useEffect(() => {
+    document.documentElement.lang = 'it';
+  }, []);
 
   return (
     <>

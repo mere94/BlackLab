@@ -31,8 +31,10 @@ export const Hero: React.FC = () => {
       <div className="hero-image">
         <img
           src={SALON_INFO.heroImageUrl}
-          alt="Interno luminoso di Black Lab Hair Spa a Torino"
+          alt="Piega e balayage biondo sfumato a onde realizzato da Black Lab Hair Spa a Torino"
           loading="eager"
+          width="1200"
+          height="1600"
         />
         <span className="image-index mono">01 / Black Lab</span>
       </div>

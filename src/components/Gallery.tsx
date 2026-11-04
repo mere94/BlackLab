@@ -57,7 +57,7 @@ export const Gallery: React.FC = () => {
               <img
                 loading="lazy"
                 src={item.imageUrl}
-                alt={item.title}
+                alt={item.alt || item.title}
                 className={item.id === 7 ? 'listino-img' : ''}
               />
               <figcaption className="gallery-caption mono">
@@ -91,7 +91,7 @@ export const Gallery: React.FC = () => {
           >
             <img
               src={activeImage.imageUrl}
-              alt={activeImage.title}
+              alt={activeImage.alt || activeImage.title}
               className="lightbox-image"
             />
             <div className="lightbox-caption">

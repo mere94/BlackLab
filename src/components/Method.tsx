@@ -10,7 +10,9 @@ export const Method: React.FC = () => {
             <img
               loading="lazy"
               src={SALON_INFO.methodImageUrl}
-              alt="Poltrona lavatesta confortevole in salone"
+              alt="Poltrona lavatesta relax e zona hair spa per trattamenti benessere cute e capelli a Torino"
+              width="1200"
+              height="1168"
             />
             <span className="image-index mono">03 / Black Lab</span>
           </div>

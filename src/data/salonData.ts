@@ -21,9 +21,9 @@ export const SALON_INFO = {
   instagramUrl: 'https://www.instagram.com/blacklabhairspa/',
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Black+Lab+Hair+Spa+Corso+Casale+205%2FI+Torino',
   logoUrl: 'https://lh3.googleusercontent.com/a-/ALV-UjWei-PTUcSZ8OxYM5sgjZNK5u9bxRp2S2Xrcj_BHhp_e97qJSo=w72-h72-p-rp-mo-br100',
-  heroImageUrl: './assets/aistudio/01_BlackLab_874b6428.jpeg',
-  featureImageUrl: './assets/aistudio/02_BlackLab_99db5a4b.jpg',
-  methodImageUrl: './assets/aistudio/03_BlackLab_56623de4.jpeg',
+  heroImageUrl: './assets/images/01_BlackLab_874b6428.jpeg',
+  featureImageUrl: './assets/images/02_BlackLab_99db5a4b.jpg',
+  methodImageUrl: './assets/images/03_BlackLab_56623de4.jpeg',
 };
 
 export const SERVICES: ServiceItem[] = [
@@ -83,45 +83,52 @@ export const METHOD_STEPS: StepItem[] = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 1,
-    imageUrl: './assets/aistudio/01_BlackLab_-_Lo_Spazio_f4867ed1.jpeg',
+    imageUrl: './assets/images/01_BlackLab_-_Lo_Spazio_f4867ed1.jpeg',
     title: 'Lo spazio',
-    caption: '01 / Black Lab · Lo spazio'
+    caption: '01 / Black Lab · Lo spazio',
+    alt: 'Postazioni styling, specchi e arredo moderno di Black Lab Hair Spa in Corso Casale a Torino'
   },
   {
     id: 2,
-    imageUrl: './assets/aistudio/02_BlackLab_-_Prodotti_6542038b.jpeg',
+    imageUrl: './assets/images/02_BlackLab_-_Prodotti_6542038b.jpeg',
     title: 'Prodotti',
-    caption: '02 / Black Lab · Prodotti'
+    caption: '02 / Black Lab · Prodotti',
+    alt: 'Piega a onde morbide con sfumature balayage bionde e prodotti professionali per capelli'
   },
   {
     id: 3,
-    imageUrl: './assets/aistudio/03_BlackLab_-_Relax_41d18916.jpeg',
+    imageUrl: './assets/images/03_BlackLab_-_Relax_41d18916.jpeg',
     title: 'Relax',
-    caption: '03 / Black Lab · Relax'
+    caption: '03 / Black Lab · Relax',
+    alt: 'Hairstyle biondo platino luminoso con styling a onde e consulenza su misura'
   },
   {
     id: 4,
-    imageUrl: './assets/aistudio/04_BlackLab_-Design_7e7f8f73.jpeg',
+    imageUrl: './assets/images/04_BlackLab_-Design_7e7f8f73.jpeg',
     title: 'Design',
-    caption: '04 / Black Lab · Design'
+    caption: '04 / Black Lab · Design',
+    alt: 'Taglio caschetto bob moderno con sfumature castane e bionde'
   },
   {
     id: 5,
-    imageUrl: './assets/aistudio/05_BlackLab_-_Cura_64f19a65.jpeg',
+    imageUrl: './assets/images/05_BlackLab_-_Cura_64f19a65.jpeg',
     title: 'Cura',
-    caption: '05 / Black Lab · Cura'
+    caption: '05 / Black Lab · Cura',
+    alt: 'Diagnosi e consulenza personalizzata della cute con microcamera professionale tricologica'
   },
   {
     id: 6,
-    imageUrl: './assets/aistudio/06_BlackLab_-_Atmosfera_bdcca2c1.jpeg',
+    imageUrl: './assets/images/06_BlackLab_-_Atmosfera_bdcca2c1.jpeg',
     title: 'Atmosfera',
-    caption: '06 / Black Lab · Atmosfera'
+    caption: '06 / Black Lab · Atmosfera',
+    alt: 'Sfumature calde balayage caramello su capelli lunghi scalati a Torino'
   },
   {
     id: 7,
-    imageUrl: './assets/aistudio/07_BlackLab_-_Listino_640db05a.jpeg',
+    imageUrl: './assets/images/07_BlackLab_-_Listino_640db05a.jpeg',
     title: 'Listino Prezzi',
-    caption: '07 / Black Lab · Listino'
+    caption: '07 / Black Lab · Listino',
+    alt: 'Listino prezzi ufficiale di Black Lab Hair Spa Torino con costi di taglio, piega, colore e trattamenti hair spa'
   }
 ];
 
