@@ -1,0 +1,8 @@
+{
+  "name": "Black Lab Hair Spa",
+  "description": "Black Lab Hair Spa a Torino, Corso Casale 205/I. Scopri il nostro approccio personalizzato: cura dei capelli, colore e stile su misura.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
