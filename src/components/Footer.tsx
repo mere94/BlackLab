@@ -13,10 +13,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenCookie }) =
     <footer className="footer">
       <div className="wrap footer-inner">
         <div className="footer-col">
-          <span className="footer-brand">{SALON_INFO.name} HAIR SPA</span>
+          <span className="footer-brand">{SALON_INFO.companyName.toUpperCase()}</span>
           <span className="footer-info">
-            TORINO · CORSO CASALE 205/I<br />
-            P.IVA: [INSERIRE PARTITA IVA]
+            Sede legale: {SALON_INFO.address} · {SALON_INFO.cityPostal}<br />
+            P.IVA: {SALON_INFO.vatNumber} · {SALON_INFO.chamberOfCommerce} (REA {SALON_INFO.rea})<br />
+            Tel: <a href={SALON_INFO.phoneHref} className="hover:underline">{SALON_INFO.phone}</a> · PEC: <a href={`mailto:${SALON_INFO.pec}`} className="hover:underline">{SALON_INFO.pec}</a>
           </span>
         </div>
         <div className="footer-links">

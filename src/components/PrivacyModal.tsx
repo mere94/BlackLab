@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { SALON_INFO } from '../data/salonData';
 
 interface PrivacyModalProps {
   isOpen: boolean;
@@ -55,7 +56,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
 
           <h5>1. Titolare del Trattamento</h5>
           <p>
-            Il Titolare del trattamento dei dati è Black Lab Hair Spa, con sede in Corso Casale 205/I, 10132 Torino (TO), P.IVA [INSERIRE P.IVA]. E-mail di contatto: [INSERIRE EMAIL].
+            Il Titolare del trattamento dei dati è {SALON_INFO.companyName}, con sede legale in {SALON_INFO.address}, {SALON_INFO.cityPostal}, Partita IVA {SALON_INFO.vatNumber}, {SALON_INFO.chamberOfCommerce} (REA {SALON_INFO.rea}). Recapiti: Tel. {SALON_INFO.phone}, PEC: {SALON_INFO.pec}, Email: {SALON_INFO.email}.
           </p>
 
           <h5>2. Tipologia di Dati Trattati</h5>

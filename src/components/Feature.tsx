@@ -10,6 +10,7 @@ export const Feature: React.FC = () => {
           src={SALON_INFO.featureImageUrl}
           alt="Dettaglio dei prodotti utilizzati da Black Lab Hair Spa"
         />
+        <span className="image-index mono">02 / Black Lab</span>
       </div>
       <div className="feature-copy" data-reveal>
         <h2 id="feature-title">

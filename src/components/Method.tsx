@@ -12,6 +12,7 @@ export const Method: React.FC = () => {
               src={SALON_INFO.methodImageUrl}
               alt="Poltrona lavatesta confortevole in salone"
             />
+            <span className="image-index mono">03 / Black Lab</span>
           </div>
           <div className="method-copy" data-reveal>
             <h2>
