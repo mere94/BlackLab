@@ -36,7 +36,7 @@ export const Gallery: React.FC = () => {
             Uno spazio<br />
             da conoscere.
           </h2>
-          <p>Un ambiente rilassante pensato per il tuo benessere in Corso Casale.</p>
+          <p>Un ambiente rilassante pensato per il tuo benessere in Corso Casale 205.</p>
         </div>
 
         <div className="gallery-grid">
