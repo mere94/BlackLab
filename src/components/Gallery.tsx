@@ -43,7 +43,7 @@ export const Gallery: React.FC = () => {
           {GALLERY_ITEMS.map((item) => (
             <figure
               key={item.id}
-              className="gallery-item group cursor-pointer"
+              className={`gallery-item group cursor-pointer ${item.id === 7 ? 'gallery-item-listino' : ''}`}
               onClick={() => setActiveImage(item)}
               tabIndex={0}
               role="button"
@@ -54,8 +54,16 @@ export const Gallery: React.FC = () => {
                 }
               }}
             >
-              <img loading="lazy" src={item.imageUrl} alt={item.title} />
-              <figcaption className="gallery-caption mono">{item.caption}</figcaption>
+              <img
+                loading="lazy"
+                src={item.imageUrl}
+                alt={item.title}
+                className={item.id === 7 ? 'listino-img' : ''}
+              />
+              <figcaption className="gallery-caption mono">
+                {item.caption}
+                {item.id === 7 && <span className="listino-zoom-hint"> · Tocca per ingrandire ↗</span>}
+              </figcaption>
             </figure>
           ))}
         </div>

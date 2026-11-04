@@ -600,43 +600,106 @@ h1 .accent {
 }
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr 1fr;
-  grid-template-rows: 245px 220px 245px;
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: clamp(260px, 20vw, 320px) clamp(260px, 20vw, 320px) auto;
+  gap: 14px;
 }
 .gallery-item {
   position: relative;
   min-width: 0;
-  min-height: 220px;
   overflow: hidden;
   background: #c7cbc6;
   margin: 0;
   cursor: pointer;
 }
 .gallery-item:first-child {
-  grid-row: span 2;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+.gallery-item:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
 }
 .gallery-item:nth-child(3) {
   grid-column: 3;
-  grid-row: span 2;
+  grid-row: 1 / span 2;
+}
+.gallery-item:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+.gallery-item:nth-child(5) {
+  grid-column: 1;
+  grid-row: 3;
+  aspect-ratio: 1120 / 1600;
+}
+.gallery-item:nth-child(6) {
+  grid-column: 2;
+  grid-row: 3;
+  aspect-ratio: 1120 / 1600;
+}
+/* Riga del listino: l'altezza della riga è determinata dall'aspect-ratio naturale del listino (1120 / 1600) affinché non venga tagliato */
+.gallery-item:nth-child(7),
+.gallery-item-listino {
+  grid-column: 3;
+  grid-row: 3;
+  aspect-ratio: 1120 / 1600;
+  background: #000;
 }
 .gallery-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%;
   transition: transform 0.65s cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+.gallery-item:nth-child(2) img {
+  object-position: center 20%;
+}
+.gallery-item:nth-child(4) img {
+  object-position: center 20%;
+}
+.gallery-item:nth-child(5) img {
+  object-position: center 20%;
+}
+/* Listino Prezzi: contain integrale al 100%, mai tagliato */
+.gallery-item:nth-child(7) img,
+.gallery-item-listino img,
+.listino-img {
+  object-fit: contain;
+  object-position: center;
 }
 .gallery-item:hover img {
   transform: scale(1.035);
 }
+.gallery-item-listino:hover img,
+.gallery-item:nth-child(7):hover img {
+  transform: scale(1.02);
+}
 .gallery-caption {
   position: absolute;
-  left: 16px;
+  left: 14px;
   bottom: 14px;
-  padding: 7px 9px;
-  background: rgba(17, 20, 18, 0.76);
+  padding: 6px 10px;
+  background: rgba(17, 20, 18, 0.82);
   color: white;
   margin: 0;
+  font-size: 10px;
+  pointer-events: none;
+  z-index: 2;
+}
+/* Posiziona la didascalia del listino in alto a sinistra per non coprire testo o prezzi in basso */
+.gallery-item-listino .gallery-caption,
+.gallery-item:nth-child(7) .gallery-caption {
+  top: 14px;
+  bottom: auto;
+  left: 14px;
+  background: rgba(17, 20, 18, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.listino-zoom-hint {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* --- Contatti --- */
@@ -1148,21 +1211,35 @@ h1 .accent {
   }
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 9px;
-  }
-  .gallery-item:first-child {
-    grid-row: span 2;
-  }
-  .gallery-item:nth-child(3) {
-    grid-column: 2;
-    grid-row: 2 / span 2;
+    grid-template-rows: auto;
+    gap: 10px;
   }
   .gallery-item {
-    min-height: 180px;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-height: auto;
+    aspect-ratio: 3 / 4;
   }
-  .gallery-item:nth-child(7) {
-    grid-column: 1 / -1;
-    min-height: 280px;
+  .gallery-item:first-child,
+  .gallery-item:nth-child(3) {
+    grid-row: auto !important;
+    grid-column: auto !important;
+  }
+  .gallery-item img {
+    object-position: center 20%;
+  }
+  .gallery-item:nth-child(7),
+  .gallery-item-listino {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+    aspect-ratio: 1120 / 1600 !important;
+    min-height: auto !important;
+    background: #000;
+  }
+  .gallery-item:nth-child(7) img,
+  .gallery-item-listino img {
+    object-fit: contain !important;
+    object-position: center !important;
   }
   .contact {
     padding: 82px 0 88px;
@@ -1236,10 +1313,11 @@ h1 .accent {
     width: 100%;
   }
   .gallery-item {
-    min-height: 155px;
+    min-height: auto;
   }
-  .gallery-item:nth-child(7) {
-    min-height: 240px;
+  .gallery-item:nth-child(7),
+  .gallery-item-listino {
+    min-height: auto;
   }
 }
 
